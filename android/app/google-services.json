@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "407788707864",
+    "firebase_url": "https://petcare-4eb22.firebaseio.com",
+    "project_id": "petcare-4eb22",
+    "storage_bucket": "petcare-4eb22.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:407788707864:android:421919ef33b7f9142da36d",
+        "android_client_info": {
+          "package_name": "br.com.ciolfi.gerente_loja"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "407788707864-2in5gb2dscai3pjavurv3hhors08b63q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6azQV-jdT8KlLVOf8R7mRLainnYALNBw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "407788707864-2in5gb2dscai3pjavurv3hhors08b63q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:407788707864:android:efef33ac5ed2bc622da36d",
+        "android_client_info": {
+          "package_name": "br.com.ciolfi.loja_virtual"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "407788707864-2in5gb2dscai3pjavurv3hhors08b63q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6azQV-jdT8KlLVOf8R7mRLainnYALNBw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "407788707864-2in5gb2dscai3pjavurv3hhors08b63q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
