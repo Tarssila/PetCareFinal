@@ -19,7 +19,7 @@ class AddSizeDialog extends StatelessWidget {
               alignment: Alignment.centerRight,
               child: FlatButton(
                 child: Text("Add"),
-                textColor: Colors.pinkAccent,
+                textColor: Colors.brown,
                 onPressed: (){
                   Navigator.of(context).pop(_controller.text);
                 },

@@ -112,11 +112,11 @@ class _ProductScreenState extends State<ProductScreen> with ProductValidator {
                         validator: validateImages,
                       ),
                       TextFormField(
-                        initialValue: snapshot.data["title"],
+                        initialValue: snapshot.data["name"],
                         style: _fieldStyle,
-                        decoration: _buildDecoration("Título"),
-                        onSaved: _productBloc.saveTitle,
-                        validator: validateTitle,
+                        decoration: _buildDecoration("Nome"),
+                        onSaved: _productBloc.saveName,
+                        validator: validateName,
                       ),
                       TextFormField(
                         initialValue: snapshot.data["description"],
@@ -127,16 +127,15 @@ class _ProductScreenState extends State<ProductScreen> with ProductValidator {
                         validator: validateDescription,
                       ),
                       TextFormField(
-                        initialValue: snapshot.data["price"]?.toStringAsFixed(2),
+                        initialValue: snapshot.data["date"],
                         style: _fieldStyle,
-                        decoration: _buildDecoration("Preço"),
-                        keyboardType: TextInputType.numberWithOptions(decimal: true),
-                        onSaved: _productBloc.savePrice,
-                        validator: validatePrice,
+                        decoration: _buildDecoration("Data"),
+                        onSaved: _productBloc.saveDate,
+                        validator: validateDate,
                       ),
                       SizedBox(height: 16,),
                       Text(
-                        "Tamanhos",
+                        "Reaplicado",
                         style: TextStyle(
                             color: Colors.grey,
                             fontSize: 12
@@ -144,11 +143,11 @@ class _ProductScreenState extends State<ProductScreen> with ProductValidator {
                       ),
                       ProductSizes(
                         context: context,
-                        initialValue: snapshot.data["sizes"],
-                        onSaved: _productBloc.saveSizes,
-                        validator: (s){
-                          if(s.isEmpty) return "";
-                        },
+                        initialValue: snapshot.data["reapplied"],
+                        onSaved: _productBloc.saveReapplied,
+//                        validator: (s){
+//                          if(s.isEmpty) return "";
+//                        },
                       )
                     ],
                   );

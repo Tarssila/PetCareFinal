@@ -22,7 +22,7 @@ class ProductSizes extends FormField<List> {
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 1,
             mainAxisSpacing: 8,
-            childAspectRatio: 0.5
+            childAspectRatio: 0.3
           ),
           children: state.value.map(
               (s){
@@ -56,7 +56,7 @@ class ProductSizes extends FormField<List> {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(4)),
                     border: Border.all(
-                        color: state.hasError ? Colors.red : Colors.pinkAccent,
+                        color: state.hasError ? Colors.red : Colors.brown,
                         width: 3
                     )
                 ),

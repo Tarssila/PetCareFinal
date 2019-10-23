@@ -44,9 +44,9 @@ class CategoryTile extends StatelessWidget {
                       leading: CircleAvatar(
                         backgroundImage: NetworkImage(doc.data["images"][0]),
                       ),
-                      title: Text(doc.data["title"]),
+                      title: Text(doc.data["name"]),
                       trailing: Text(
-                          "R\$${doc.data["price"].toStringAsFixed(2)}"
+                          doc.data["date"]
                       ),
                       onTap: (){
                         Navigator.of(context).push(
