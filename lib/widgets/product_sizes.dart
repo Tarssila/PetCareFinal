@@ -41,7 +41,7 @@ class ProductSizes extends FormField<List> {
                     alignment: Alignment.center,
                     child: Text(
                       s,
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.black),
                     ),
                   ),
                 );
@@ -54,16 +54,16 @@ class ProductSizes extends FormField<List> {
               },
               child: Container(
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(4)),
+                    borderRadius: BorderRadius.all(Radius.circular(2)),
                     border: Border.all(
                         color: state.hasError ? Colors.red : Colors.brown,
-                        width: 3
+                        width: 1
                     )
                 ),
                 alignment: Alignment.center,
                 child: Text(
                   "+",
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.brown),
                 ),
               ),
             )

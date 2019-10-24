@@ -37,20 +37,20 @@ class _ProductScreenState extends State<ProductScreen> with ProductValidator {
     }
 
     final _fieldStyle = TextStyle(
-        color: Colors.white,
+        color: Colors.black,
         fontSize: 16
     );
 
     return Scaffold(
       key: _scaffoldKey,
-      backgroundColor: Colors.grey[850],
+      backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
         title: StreamBuilder<bool>(
             stream: _productBloc.outCreated,
             initialData: false,
             builder: (context, snapshot) {
-              return Text(snapshot.data ? "Editar Produto" : "Criar Produto");
+              return Text(snapshot.data ? "Editar vacina ou medicamento" : "Nova vacina ou medicamento ");
             }
         ),
         actions: <Widget>[

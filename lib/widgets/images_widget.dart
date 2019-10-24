@@ -41,8 +41,8 @@ class ImagesWidget extends FormField<List> {
                   child: Container(
                     height: 100,
                     width: 100,
-                    child: Icon(Icons.camera_enhance, color: Colors.white,),
-                    color: Colors.white.withAlpha(50),
+                    child: Icon(Icons.camera_enhance, color: Colors.black,),
+                    color: Colors.blueGrey.withAlpha(50),
                   ),
                   onTap: (){
                     showModalBottomSheet(context: context,
