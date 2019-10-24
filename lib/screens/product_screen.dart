@@ -176,7 +176,7 @@ class _ProductScreenState extends State<ProductScreen> with ProductValidator {
       _formKey.currentState.save();
 
       _scaffoldKey.currentState.showSnackBar(
-          SnackBar(content: Text("Salvando produto...", style: TextStyle(color: Colors.white),),
+          SnackBar(content: Text("Salvando vacina ou medicamento", style: TextStyle(color: Colors.white),),
             duration: Duration(minutes: 1),
 
           )
@@ -187,7 +187,7 @@ class _ProductScreenState extends State<ProductScreen> with ProductValidator {
       _scaffoldKey.currentState.removeCurrentSnackBar();
 
       _scaffoldKey.currentState.showSnackBar(
-          SnackBar(content: Text(success ? "Produto salvo!" : "Erro ao salvar produto!", style: TextStyle(color: Colors.white),),
+          SnackBar(content: Text(success ? "Vacina ou Medicamento salvo!" : "Erro ao salvar vacina ou medicamento!", style: TextStyle(color: Colors.white),),
 
           )
       );
