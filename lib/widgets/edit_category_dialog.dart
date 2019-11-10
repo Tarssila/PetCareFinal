@@ -28,6 +28,7 @@ class _EditCategoryDialogState extends State<EditCategoryDialog> {
         category.data["title"] : ""
         );
 
+
   @override
   Widget build(BuildContext context) {
     return Dialog(

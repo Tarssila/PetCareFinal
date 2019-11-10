@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:loja_virtual/screens/pet_screen.dart';
 import 'package:loja_virtual/widgets/edit_category_dialog.dart';
 
 class CartButton extends StatelessWidget {

@@ -6,36 +6,46 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:rxdart/rxdart.dart';
 
-class CategoryBloc extends BlocBase {
+class Category2Bloc extends BlocBase {
 
   final _titleController = BehaviorSubject<String>();
+  final _typeController = BehaviorSubject<String>();
+  final _breedController = BehaviorSubject<String>();
+  final _sexController = BehaviorSubject<String>();
+  final _weightController = BehaviorSubject<String>();
+  final _dateController = BehaviorSubject<String>();
   final _imageController = BehaviorSubject();
   final _deleteController = BehaviorSubject<bool>();
 
   Stream<String> get outTitle => _titleController.stream.transform(
-    StreamTransformer<String, String>.fromHandlers(
-      handleData: (title, sink){
-        if(title.isEmpty)
-          sink.addError("Insira um nome");
-        else
-          sink.add(title);
-      }
-    )
+      StreamTransformer<String, String>.fromHandlers(
+          handleData: (title, sink){
+            if(title.isEmpty)
+              sink.addError("Insira um nome");
+            else
+              sink.add(title);
+          }
+      )
   );
   Stream get outImage => _imageController.stream;
   Stream<bool> get outDelete => _deleteController.stream;
 
 
   Stream<bool> get submitValid => Observable.combineLatest2(
-    outTitle, outImage, (a, b) => true
+      outTitle, outImage, (a, b) => true
   );
 
   DocumentSnapshot category;
 
   String title;
+  String type;
+  String breed;
+  String date;
+  String sex;
+  String weight;
   File image;
 
-  CategoryBloc(this.category){
+  Category2Bloc(this.category){
     if(category != null){
       title = category.data["title"];
 
@@ -55,6 +65,31 @@ class CategoryBloc extends BlocBase {
   void setTitle(String title){
     this.title = title;
     _titleController.add(title);
+  }
+
+  void setType(String type){
+    this.type = type;
+    _typeController.add(type);
+  }
+
+  void setBreed(String breed){
+    this.breed = breed;
+    _breedController.add(breed);
+  }
+
+  void setDate(String date){
+    this.date = date;
+    _dateController.add(date);
+  }
+
+  void setSex(String sex){
+    this.sex = sex;
+    _sexController.add(sex);
+  }
+
+  void setWeight(String weight){
+    this.weight = weight;
+    _weightController.add(weight);
   }
 
   void delete(){
